@@ -222,3 +222,296 @@ if a != b:
     print('True')
 else:
     print('False')
+
+#6052
+number = int(input())
+print(bool(number))
+
+#6053
+number = int(input())
+print(not bool(number))
+
+#6054
+a, b = map(int, input().split())
+print(bool(a) and bool(b))
+
+#6055
+a, b = map(int,input().split())
+print(bool(a) or bool(b))
+
+#6056
+a, b = map(int,input().split())
+if bool(a) != bool(b):
+    print('True')
+else:
+    print('False')
+    
+#6057
+a, b = map(int, input().split())
+if bool(a) == bool(b):
+    print('True')
+else:
+    print('False')
+
+#6058
+a, b = map(int, input().split())
+c = bool(a)
+d = bool(b)
+print((not c) and (not d))
+
+#6059
+number = ~int(input())
+print(number)
+
+#6060
+number1, number2 = map(int, input().split())
+print(number1 & number2)
+
+#6061
+number1, number2 = map(int,input().split())
+print(number1 | number2)
+
+#6062
+number1, number2 = map(int,input().split())
+print(number1 ^ number2)
+
+#6063
+a, b = map(int, input().split())
+print(a if a>=b else b)
+
+#6064
+a, b, c = map(int, input().split())
+print((a if a<b else b) if (a if a<b else b)<c else c)
+
+#6065
+a, b, c = map(int, input().split())
+if a % 2 == 0:
+    print(a)
+if b % 2 ==0:
+    print(b)
+if c % 2 == 0:
+    print(c)
+    
+#6066
+a, b, c = map(int,input().split())
+if a%2==0:
+    print('even')
+else:
+    print('odd')
+    
+if b%2==0:
+    print('even')
+else:
+    print('odd')
+
+if c%2==0:
+    print('even')
+else:
+    print('odd')
+    
+#6067
+n = int(input())
+if n < 0:
+    if n%2 == 0:
+        print('A')
+    else:
+        print('B')
+else:
+    if n%2 == 0:
+        print('C')
+    else:
+        print('D')
+        
+#6068
+score = int(input())
+
+if score >= 90:
+    print('A')
+elif score >= 70:
+    print('B')
+elif score >= 40:
+    print('C')
+else:
+    print('D')
+    
+#6069
+char = input()
+
+if char == 'A':
+    print('best!!!')
+elif char =='B':
+    print('good!!')
+elif char == 'C':
+    print('run!')
+elif char == 'D':
+    print('slowly~')
+else:
+    print('what?')
+    
+#6070
+month = int(input())
+
+if month // 3 ==1:
+    print('spring')
+elif month // 3 == 2:
+    print('summer')
+elif month // 3 == 3:
+    print('fall')
+else:
+    print('winter')
+    
+#6071
+num = 1
+while num != 0:
+     num = int(input())
+     if num != 0:
+         print(num)
+     else:
+         break
+         
+#6072
+n = int(input())
+
+for i in range(n,0,-1):
+    print(i)
+    
+#6073
+n = int(input())
+
+while n != 0:
+    print(n-1)
+    n -= 1
+    
+#6074
+char = input()
+num = ord(char)
+start = ord('a')
+
+while start <= num:
+    print(chr(start), end=" ")
+    start += 1
+
+#6075
+num = int(input())
+start = 0
+
+while start <= num:
+    print(start)
+    start += 1
+
+#6076
+num = int(input())
+
+for i in range(num+1):
+    print(i)
+    
+#6077
+num = int(input())
+sum = 0
+
+for i in range(1,num+1):
+    if i % 2 == 0:
+        sum += i
+print(sum)
+
+#6078
+while True:
+    char = input()
+    print(char)
+    if char == 'q':
+        break
+ 
+#6079
+num = int(input())
+sum = 0
+
+for i in range(1,num+1):
+    sum += i
+    if sum >= num:
+        print(i)
+        break
+        
+#6080
+n, m = map(int, input().split())
+
+for i in range(1,n+1):
+    for j in range(1, m+1):
+        print(i, j)
+        
+#6081
+hex_num = int(input(), 16)
+
+for i in range(1,16):
+    print('%X*%X=%X' %(hex_num, i, hex_num*i))
+    
+#6082
+num = int(input())
+
+for i in range(1,num+1):
+    if i%10==3 or i%10==6 or i%10 == 9:
+        print('X', end=" ")
+    else:
+        print(i, end=" ")
+
+#6083
+r, g, b= map(int, input().split())
+sum = 0
+
+for x in range(r):
+    for y in range(g):
+        for z in range(b):
+            print(x, y, z)
+            sum += 1
+print(sum)           
+
+#6084
+h, b, c, s = map(int, input().split())
+space_mb = round((h*b*c*s)/(8*1024*1024),1)
+print(str(space_mb) + " MB")
+
+#6085
+w, h, p = map(int, input().split())
+space_mega = format((w*h*p)/(8*1024*1024), ".2f")
+print(space_mega, 'MB')
+
+#6086
+num = int(input())
+sum = 0
+c =1
+
+while True:
+    sum += c
+    c += 1
+    if sum > num:
+        break
+print(sum)          
+
+#6087
+num = int(input())
+for i in range(1, num+1):
+    if i%3 == 0:
+        continue
+    print(i, end=" ")
+    
+#6088
+a, d, n = map(int, input().split())
+print(a+((n-1)*d))
+
+#6089
+a, r, n = map(int, input().split())
+print(a*r**(n-1))
+
+#6090
+a, m, d, n = map(int, input().split())
+for _ in range(n-1):
+    a *= m
+    a += d
+print(a)
+
+#6091
+d1, d2, d3 = map(int,input().split())
+
+d = 1
+while d%d1 !=0 or d%d2 !=0 or d%d3 != 0:
+    d += 1
+print(d)
