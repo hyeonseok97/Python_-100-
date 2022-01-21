@@ -515,3 +515,69 @@ d = 1
 while d%d1 !=0 or d%d2 !=0 or d%d3 != 0:
     d += 1
 print(d)
+
+#6092
+num = int(input())
+student =[0]*23
+teacher = list(map(int, input().split()))
+
+for i in range(num):
+    student[teacher[i]-1] += 1
+    
+for i in student:
+    print(i, end=" ")     
+
+#6093
+num = int(input())
+teacher = list(map(int, input().split()))
+teacher.reverse()
+
+for i in teacher:
+    print(i, end=" ")
+
+#6094
+num = int(input())
+teacher = list(map(int, input().split()))
+print(min(teacher))
+
+#6095 (문제 입력 설명부분에 똑같은 좌표는 입력이 안된다라고 했지만, 컴파일시 똑같은 좌표가 입력되어 오류 발생 문제 --> if문 추가)
+num = int(input())
+position_list=[[0]*19 for i in range(19)]
+x=[]
+y=[]
+
+for i in range(num):
+    a, b = map(int, input().split())
+    x.append(a)
+    y.append(b)
+    position_list[x[i]-1][y[i]-1] += 1
+    if position_list[x[i]-1][y[i]-1] == 2:
+         position_list[x[i]-1][y[i]-1] = 1
+
+for j in range(19):
+  for k in range(19):
+    print(position_list[j][k], end = " ")
+  print('')
+  
+  #6096
+  setting= [list(map(int,input().split())) for _ in range(19)] 
+
+num = int(input())
+
+for i in range(num):
+    a, b = map(int, input().split())
+    for j in range(19):
+        if setting[a-1][j] == 0:
+            setting[a-1][j] = 1
+        else:
+            setting[a-1][j] = 0 
+
+        if setting[j][b-1] == 0:
+            setting[j][b-1] = 1
+        else:
+            setting[j][b-1] = 0
+
+for i in range(19):
+    for j in range(19):
+        print(setting[i][j], end= " ")
+    print('')                   
