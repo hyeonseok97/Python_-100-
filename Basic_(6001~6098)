@@ -559,8 +559,8 @@ for j in range(19):
     print(position_list[j][k], end = " ")
   print('')
   
-  #6096
-  setting= [list(map(int,input().split())) for _ in range(19)] 
+#6096
+setting= [list(map(int,input().split())) for _ in range(19)] 
 
 num = int(input())
 
@@ -581,3 +581,53 @@ for i in range(19):
     for j in range(19):
         print(setting[i][j], end= " ")
     print('')                   
+
+#6097
+h, w = map(int,input().split())
+setting = [[0]*w for i in range(h)]
+
+num = int(input())
+
+for i in range(num):
+    l, d, x, y = map(int,input().split())
+    if d == 0:
+        for j in range(l):
+            setting[x-1][y-1] = 1
+            y += 1
+    else:
+        for j in range(l):
+            setting[x-1][y-1] = 1
+            x += 1
+
+for i in range(h):
+    for j in range(w):
+        print(setting[i][j], end=' ')
+    print('')  
+
+#6098
+setting = [list(map(int, input().split())) for _ in range(10)]
+
+x = 1
+y = 1
+count = 0
+
+while setting[x][y] != 2:
+    if setting[x][y] == 0:
+        setting[x][y] = 9
+        y += 1
+    elif setting[x][y] == 1:
+        y -= 1
+        x += 1
+        if setting[x][y] == 0:
+            setting[x][y] = 9
+            y += 1
+        else:
+            break
+
+if setting[x][y] == 2:
+    setting[x][y] = 9    
+
+for i in range(10):
+    for j in range(10):
+        print(setting[i][j], end=' ')
+    print()
